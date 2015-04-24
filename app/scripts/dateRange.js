@@ -14,10 +14,12 @@ Module.directive('dateRange', function () {
       /*
        * If no date is set on scope, set current date from user system
        */
-        if (scope.start)
+        if (scope.start) {
             scope.start = new Date(scope.start);
-        if (scope.end)
+        }
+        if (scope.end) {
             scope.end = new Date(scope.end);
+        }
 
         attrs.$observe('disabled', function(isDisabled){
           scope.disableDatePickers = !!isDisabled;
