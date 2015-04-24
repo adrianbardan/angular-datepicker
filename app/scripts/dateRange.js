@@ -11,9 +11,6 @@ Module.directive('dateRange', function () {
     },
     link: function (scope, element, attrs) {
 
-      /*
-       * If no date is set on scope, set current date from user system
-       */
         if (scope.start) {
             scope.start = new Date(scope.start);
         }
